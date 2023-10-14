@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:bm": "npx cypress run --record  --group bm --spec \"cypress/e2e/bookingMovie.cy.js\" --ci-build-id 4",
+    "test:la": "npx cypress run --record  --group la --spec \"cypress/e2e/loginAdmin.cy.js\" --ci-build-id 4",
+    "test:parallel": "npm run test:bm & npm run test:la"
   },
   "author": "",
   "license": "ISC",
